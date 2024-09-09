@@ -1,0 +1,9 @@
+{% extends 'reservas/base.html' %}
+
+{% block title %}Inicio{% endblock %}
+
+{% block content %}
+<h2>Bienvenido a Futbolito</h2>
+<p>Reserva canchas sintéticas fácilmente.</p>
+<a href="{% url 'reservar' %}" class="button">Reservar una cancha</a>
+{% endblock %}

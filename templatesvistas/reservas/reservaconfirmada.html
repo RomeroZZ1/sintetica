@@ -1,0 +1,9 @@
+{% extends 'reservas/base.html' %}
+
+{% block title %}Reserva Confirmada{% endblock %}
+
+{% block content %}
+<h2>Reserva Confirmada</h2>
+<p>Tu reserva para la {{ cancha }} el {{ fecha }} ha sido confirmada.</p>
+<a href="{% url 'home' %}">Volver al inicio</a>
+{% endblock %}

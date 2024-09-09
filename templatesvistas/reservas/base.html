@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Futbolito - Reservas{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'reservas/css/style.css' %}">
+</head>
+<body>
+    <header>
+        <h1>Futbolito - Gestión de Canchas</h1>
+        <nav>
+            <ul>
+                <li><a href="{% url 'home' %}">Inicio</a></li>
+                <li><a href="{% url 'reservar' %}">Reservar</a></li>
+                <li><a href="{% url 'historial' %}">Historial</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+</body>
+</html>
+

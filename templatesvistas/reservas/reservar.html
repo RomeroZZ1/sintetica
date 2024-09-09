@@ -1,0 +1,20 @@
+{% extends 'reservas/base.html' %}
+
+{% block title %}Reservar{% endblock %}
+
+{% block content %}
+<h2>Reservar una Cancha</h2>
+<form action="{% url 'reservar' %}" method="POST">
+    {% csrf_token %}
+    <label for="fecha">Fecha:</label>
+    <input type="date" id="fecha" name="fecha" required>
+
+    <label for="cancha">Cancha:</label>
+    <select id="cancha" name="cancha" required>
+        <option value="Cancha 1">Cancha 1</option>
+        <option value="Cancha 2">Cancha 2</option>
+    </select>
+
+    <button type="submit">Reservar</button>
+</form>
+{% endblock %}
